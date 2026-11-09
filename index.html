@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Мерно - концепт: UX, лендинг, логотип</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+:root{--ink:#10243e;--sky:#d8ecff;--yolk:#ffc91f;--paper:#fff;--line:#cfdcea;--mute:#566a82;--red:#c8321e;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--sky);color:var(--ink);font:400 17px/1.5 Geologica,Arial,sans-serif;overflow-x:hidden}
+button,input{font:inherit;color:inherit}button{cursor:pointer;background:none;border:0}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.wrap{width:min(1240px,100% - 48px);margin-inline:auto}
+.mark{display:inline-flex;align-items:flex-end;gap:.11em;height:1em}
+.mark i{display:block;width:.15em;background:currentColor;border-radius:.075em;transform-origin:bottom}
+.mark i:nth-child(1),.mark i:nth-child(5){height:100%}.mark i:nth-child(2),.mark i:nth-child(4){height:62%}
+.mark i:nth-child(3){height:36%;background:var(--yolk)}
+.brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:25px;letter-spacing:-.02em;text-decoration:none;color:inherit}
+.brand .mark{font-size:26px}
+.top{position:sticky;top:0;z-index:30;background:var(--sky)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:18px}
+.top nav{display:flex;gap:26px;font-size:15px}.top nav a{color:inherit;text-decoration:none;font-weight:500}.top nav a:hover{text-decoration:underline}
+.btn{display:inline-block;background:var(--ink);color:#fff;font-weight:700;padding:15px 26px;border-radius:12px;text-decoration:none;transition:transform .25s var(--ease)}
+.btn:hover{transform:translateY(-3px)}.btn:active{transform:scale(.97)}
+.hero{padding:clamp(24px,4vw,56px) 0 0}
+.hgrid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:clamp(30px,6vw,90px);align-items:start}
+h1{font-size:clamp(50px,8.6vw,116px);line-height:.98;font-weight:800;letter-spacing:-.04em}
+.lead{font-size:clamp(18px,1.6vw,22px);max-width:32em;margin:24px 0 28px}
+.odo{display:flex;gap:clamp(4px,.6vw,8px);margin-top:clamp(34px,5vw,64px);font-size:clamp(58px,11vw,150px);font-weight:700;line-height:1}
+.wheel{height:1.28em;width:.86em;overflow:hidden;background:var(--ink);color:#fff;border-radius:.12em;position:relative}
+.wheel::after{content:"";position:absolute;inset:0;background:linear-gradient(#10243ecc,transparent 26%,transparent 74%,#10243ecc);pointer-events:none}
+.wheel.last{background:var(--yolk);color:var(--ink)}.wheel.last::after{background:linear-gradient(#ffc91f99,transparent 26%,transparent 74%,#ffc91f99)}
+.col{display:block;transition:transform 1.1s var(--ease);will-change:transform}
+.col b{display:block;height:1.28em;line-height:1.28em;text-align:center;font-weight:700}
+.odo small{align-self:flex-end;font-size:.19em;font-weight:500;padding:0 0 .4em .4em}
+.band{height:clamp(40px,6vw,70px)}
+
+.phone{width:320px;max-width:100%;background:var(--ink);padding:10px;border-radius:40px;position:relative;box-shadow:0 26px 50px -22px #10243e99}
+.screen{background:#fff;border-radius:31px;height:600px;overflow:hidden;position:relative;padding:22px 18px 16px;display:flex;flex-direction:column}
+.screen.a>*{animation:scr .42s var(--ease) both}
+@keyframes scr{from{opacity:0;transform:translateX(16px)}}
+.st{font-size:13px;color:var(--mute)}.sh{font-size:25px;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin:4px 0 14px}
+.warn{background:var(--yolk);border-radius:12px;padding:11px 13px;font-size:14px;font-weight:500;margin-bottom:12px}
+.m{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;border:1px solid var(--line);border-radius:14px;padding:13px;margin-bottom:9px;transition:border-color .2s,transform .2s}
+.m:hover{border-color:var(--ink);transform:translateX(2px)}
+.m strong{display:block;font-weight:700;font-size:16px}.m span{font-size:13px;color:var(--mute)}
+.m em{font-style:normal;font-size:12px;font-weight:700;padding:4px 8px;border-radius:7px;background:var(--sky);white-space:nowrap}.m em.ok{background:var(--ink);color:#fff}
+.tabs{margin-top:auto;display:flex;border-top:1px solid var(--line);padding-top:9px}
+.tabs button{flex:1;font-size:13px;font-weight:500;color:var(--mute);padding:7px}.tabs button[aria-current=true]{color:var(--ink);font-weight:800}
+.back{align-self:flex-start;font-size:14px;font-weight:500;padding:0 0 6px}
+.dials{display:flex;justify-content:center;gap:5px;margin:16px 0 8px}
+.dial{width:42px;text-align:center}.dial button{width:100%;height:32px;font-size:19px;font-weight:700;background:var(--sky);border-radius:9px}
+.dial b{display:block;font-size:36px;font-weight:700;background:var(--ink);color:#fff;margin:5px 0;border-radius:9px;padding:6px 0}
+.dial.f b{background:var(--yolk);color:var(--ink)}
+.msg{min-height:42px;font-size:14px;text-align:center;color:var(--mute)}.msg.err{color:var(--red);font-weight:500}
+.go{width:100%;background:var(--ink);color:#fff;font-weight:700;padding:15px;border-radius:12px;margin-top:auto}
+.go:disabled{background:var(--line);color:var(--mute);cursor:not-allowed}
+.check{width:86px;height:86px;border-radius:50%;background:var(--yolk);display:grid;place-items:center;margin:34px auto 18px}
+.check path{stroke-dasharray:50;stroke-dashoffset:50;animation:draw .55s .15s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.sum{text-align:center}.sum strong{display:block;font-size:42px;font-weight:800;letter-spacing:-.03em}
+.hist{display:flex;align-items:flex-end;gap:8px;height:180px;margin:12px 0 7px}
+.hist i{flex:1;background:var(--sky);border-radius:7px 7px 0 0;transform-origin:bottom;animation:gr .7s var(--ease) both}
+.hist i:last-child{background:var(--yolk)}@keyframes gr{from{transform:scaleY(0)}}
+.lab{display:flex;gap:8px;font-size:12px;color:var(--mute)}.lab span{flex:1;text-align:center}
+
+section.s{padding:clamp(64px,9vw,120px) 0}
+h2{font-size:clamp(42px,6.2vw,84px);line-height:1;font-weight:800;letter-spacing:-.035em}
+.kick{font-size:14px;font-weight:700;margin-bottom:14px}
+.ux{background:#fff}
+.uxg{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:clamp(30px,6vw,90px);align-items:start;margin-top:40px}
+.stp{display:block;width:100%;text-align:left;border-top:1px solid var(--line);padding:20px 0;transition:padding .3s var(--ease)}
+.stp:hover{padding-left:10px}
+.stp b{display:block;font-size:clamp(23px,2.6vw,33px);font-weight:700;letter-spacing:-.02em;line-height:1.15;color:var(--mute);transition:color .25s}
+.stp span{display:block;max-width:36em;color:var(--mute);margin-top:6px;font-size:16px}
+.stp[aria-current=true] b{color:var(--ink)}
+.side{position:sticky;top:90px}
+.lg{background:var(--ink);color:#fff}
+.lgg{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px;margin-top:40px}
+.tile{border-radius:18px;padding:30px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.tile p{font-size:14px;opacity:.78}
+.t1{grid-row:span 2;background:#1a3454;align-items:flex-start;cursor:pointer;text-align:left;color:#fff}
+.t1 .big{font-size:clamp(90px,15vw,200px);display:inline-flex}
+.t1 .big i{animation:rise .9s var(--ease) both}
+.t1 .big i:nth-child(2){animation-delay:.08s}.t1 .big i:nth-child(3){animation-delay:.16s}.t1 .big i:nth-child(4){animation-delay:.24s}.t1 .big i:nth-child(5){animation-delay:.32s}
+@keyframes rise{from{transform:scaleY(0)}}
+.t2{background:var(--yolk);color:var(--ink)}.t2 .mark i:nth-child(3){background:#fff}
+.t3{background:#fff;color:var(--ink)}
+.t2 .brand,.t3 .brand{font-size:44px}.t2 .brand .mark,.t3 .brand .mark{font-size:44px}
+.sizes{display:flex;align-items:flex-end;gap:20px}
+.cta{padding:clamp(60px,8vw,110px) 0}
+.frm{display:flex;gap:10px;margin-top:28px;max-width:620px}
+.frm input{flex:1;min-width:0;height:54px;border:1px solid var(--ink);border-radius:12px;padding:0 15px;background:#fff}
+.note{margin-top:14px;min-height:26px;font-weight:500}
+footer{background:var(--ink);color:#b9c6d6;padding:26px 0;font-size:14px}
+.r{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.r.v{opacity:1;transform:none}
+@media(max-width:900px){.hgrid,.uxg,.lgg{grid-template-columns:minmax(0,1fr)}.phone{margin-inline:auto}.side{position:static}.top nav{display:none}.t1{grid-row:auto}}
+@media(max-width:620px){.wrap{width:calc(100% - 32px)}h1{font-size:14.8vw}.odo{font-size:15vw}.frm{flex-direction:column}.frm input{flex:none}.frm .btn{text-align:center}.t2 .brand,.t3 .brand{font-size:36px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}html{scroll-behavior:auto}.r{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="#"><span class="mark"><i></i><i></i><i></i><i></i><i></i></span>мерно</a>
+<nav><a href="#ux">Как это работает</a><a href="#logo">Логотип</a><a href="#start">Начать</a></nav></div></header>
+
+<section class="hero"><div class="wrap"><div class="hgrid">
+ <div><h1>Показания за 20 секунд</h1>
+ <p class="lead">Напомним за три дня до срока, подскажем прошлое значение и не дадим отправить ошибку.</p>
+ <a class="btn" href="#start">Подключить счётчики</a>
+ <div class="odo" id="odo" role="img" aria-label="Пример показаний счётчика"></div></div>
+ <div><div class="phone"><div class="screen" data-scr></div></div></div>
+</div><div class="band"></div></div></section>
+
+<section class="s ux" id="ux"><div class="wrap">
+ <p class="kick r">UX</p><h2 class="r">Каждый шаг снимает одну причину бросить</h2>
+ <div class="uxg"><div class="r" id="steps"></div>
+ <div class="side"><div class="phone"><div class="screen" data-scr></div></div><p style="color:var(--mute);font-size:15px;margin-top:16px;text-align:center">Нажимайте шаги или сам экран. Введите значение меньше прошлого, и отправить не получится.</p></div></div>
+</div></section>
+
+<section class="s lg" id="logo"><div class="wrap">
+ <p class="kick r">Логотип</p><h2 class="r">Пять делений шкалы и&nbsp;буква&nbsp;М</h2>
+ <div class="lgg r">
+  <button class="tile t1" id="rep"><span class="mark big" id="big"><i></i><i></i><i></i><i></i><i></i></span><p>Нажмите, чтобы собрать знак заново. Деления мерной шкалы складываются в М, короткое жёлтое - текущее значение.</p></button>
+  <div class="tile t2"><span class="brand"><span class="mark"><i></i><i></i><i></i><i></i><i></i></span>мерно</span><p>На фирменном жёлтом</p></div>
+  <div class="tile t3"><div class="sizes"><span class="mark" style="font-size:64px"><i></i><i></i><i></i><i></i><i></i></span><span class="mark" style="font-size:32px"><i></i><i></i><i></i><i></i><i></i></span><span class="mark" style="font-size:16px"><i></i><i></i><i></i><i></i><i></i></span></div><p>Читается от иконки приложения до 16 px</p></div>
+ </div>
+</div></section>
+
+<section class="cta" id="start"><div class="wrap r"><h2>Первое напоминание придёт вовремя</h2>
+ <form class="frm" id="f"><input required type="tel" autocomplete="tel" placeholder="Телефон" aria-label="Телефон"><button class="btn">Подключить</button></form><p class="note" id="note" role="status"></p></div></section>
+<footer><div class="wrap">Концепт для портфолио. Название, интерфейс и цифры вымышленные.</div></footer>
+<script>
+const $=s=>document.querySelector(s),reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const odo=$('#odo'),N=6;odo.innerHTML=[...Array(N)].map((_,i)=>`<div class="wheel ${i===N-1?'last':''}"><span class="col">${[...Array(20)].map((_,d)=>`<b>${d%10}</b>`).join('')}</span></div>`).join('')+'<small>м³</small>';
+const cols=[...odo.querySelectorAll('.col')];
+cols.forEach((c,i)=>c.style.transitionDuration=(reduce?0:.9+i*.16)+'s');
+function setOdo(v){const s=String(v).padStart(N,'0');[...s].forEach((d,i)=>{cols[i].style.transform=`translateY(${-(+d+10)*5}%)`})}
+setOdo(0);setTimeout(()=>setOdo(124358),reduce?0:260);
+let t;addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>setOdo(124358+Math.round(scrollY/6)),30)},{passive:true});
+
+const M=[{id:'cold',n:'Холодная вода',prev:[0,1,2,4,3],u:'м³',rate:62},{id:'hot',n:'Горячая вода',prev:[0,0,8,7,1],u:'м³',rate:254},{id:'el',n:'Электричество',prev:[1,8,4,0,6],u:'кВт·ч',rate:7}];
+const S={v:'home',m:null,d:[],done:{}};
+const val=a=>+a.join('');
+const tabs=()=>`<div class="tabs"><button data-go="home" aria-current="${S.v==='home'}">Счётчики</button><button data-go="hist" aria-current="${S.v==='hist'}">История</button></div>`;
+const V={
+ home(){const left=M.filter(m=>!S.done[m.id]).length;return `<p class="st">кв. 48</p><h3 class="sh">${left?`Осталось ${left} из 3`:'Всё передано'}</h3>${left?'<p class="warn">Передать до 25 числа, осталось 3 дня</p>':''}${M.map(m=>`<button class="m" data-m="${m.id}"><span><strong>${m.n}</strong><span>${S.done[m.id]?'передано: ':'прошлое: '}${(S.done[m.id]||m.prev).join('')} ${m.u}</span></span><em class="${S.done[m.id]?'ok':''}">${S.done[m.id]?'Готово':'Ввести'}</em></button>`).join('')}${tabs()}`},
+ input(){const m=S.m,bad=val(S.d)<val(m.prev),same=val(S.d)===val(m.prev),big=val(S.d)-val(m.prev)>50;
+  return `<button class="back" data-go="home">← Назад</button><h3 class="sh">${m.n}</h3><p class="st">Прошлое значение: ${m.prev.join('')} ${m.u}</p><div class="dials">${S.d.map((x,i)=>`<div class="dial ${i>2?'f':''}"><button data-i="${i}" data-s="1" aria-label="Больше">+</button><b>${x}</b><button data-i="${i}" data-s="-1" aria-label="Меньше">−</button></div>`).join('')}</div><p class="msg ${bad?'err':''}">${bad?'Меньше прошлого значения. Проверьте цифры.':same?'Значение не изменилось. Увеличьте последние цифры.':big?'Расход необычно большой. Всё верно?':`Расход: ${val(S.d)-val(m.prev)} ${m.u}`}</p><button class="go" data-send ${bad||same?'disabled':''}>Передать</button>`},
+ done(){const m=S.m,u=val(S.d)-val(m.prev);return `<div class="check"><svg width="44" height="44" viewBox="0 0 44 44" fill="none"><path d="M10 23l8 8 16-18" stroke="#10243e" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="sum"><h3 class="sh">Передано</h3><p class="st">Примерно к оплате</p><strong>${(u*m.rate).toLocaleString('ru-RU')} ₽</strong><p class="st">${m.n}, расход ${u} ${m.u}</p></div><button class="go" data-go="home">К счётчикам</button>`},
+ hist(){const h=[62,48,70,55,44,58],l=['Июн','Июл','Авг','Сен','Окт','Ноя'];return `<p class="st">Холодная вода</p><h3 class="sh">Меньше, чем в прошлом году</h3><div class="hist">${h.map((x,i)=>`<i style="height:${x/70*100}%;animation-delay:${reduce?0:i*55}ms"></i>`).join('')}</div><div class="lab">${l.map(x=>`<span>${x}</span>`).join('')}</div>${tabs()}`}};
+let lastV;function draw(){const ch=S.v!==lastV;lastV=S.v;document.querySelectorAll('[data-scr]').forEach(s=>{s.classList.toggle('a',ch);s.innerHTML=V[S.v]()});document.querySelectorAll('.stp').forEach(b=>b.setAttribute('aria-current',b.dataset.st===S.v))}
+const ST=[['home','Сразу видно, что осталось','Главный экран отвечает на один вопрос: сколько счётчиков ещё передать и до какого числа.'],['input','Ошибку нельзя отправить','Прошлое значение перед глазами, крупные колёса цифр, проверка меньше прошлого и необычно большого расхода.'],['done','Результат вместо «успешно»','После отправки человек видит расход и примерную сумму, ради которой всё и делал.'],['hist','История отвечает на «почему так много»','Шесть месяцев расхода на одном экране, без таблиц и выгрузок.']];
+$('#steps').innerHTML=ST.map(s=>`<button class="stp" data-st="${s[0]}"><b>${s[1]}</b><span>${s[2]}</span></button>`).join('');
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+ if(b.dataset.st){if(b.dataset.st==='input'||b.dataset.st==='done'){S.m=S.m||M[0];S.d=S.d.length?S.d:[...S.m.prev];if(b.dataset.st==='done'&&val(S.d)<=val(S.m.prev)){S.d=[...S.m.prev];S.d[4]=(S.d[4]+6)%10;if(S.d[4]<6)S.d[3]+=1}}S.v=b.dataset.st;draw();if(innerWidth<=900)document.querySelector('.side .phone').scrollIntoView({block:'center'});return}
+ if(b.dataset.m){S.m=M.find(x=>x.id===b.dataset.m);S.d=[...(S.done[S.m.id]||S.m.prev)];S.v='input';return draw()}
+ if(b.dataset.go){S.v=b.dataset.go;return draw()}
+ if(b.dataset.i!==undefined){const i=+b.dataset.i;S.d[i]=(S.d[i]+ +b.dataset.s+10)%10;return draw()}
+ if(b.hasAttribute('data-send')){S.done[S.m.id]=[...S.d];S.v='done';return draw()}
+ if(b.id==='rep'||b.closest('#rep')){const m=$('#big');m.replaceWith(m.cloneNode(true))}});
+draw();
+$('#f').addEventListener('submit',e=>{e.preventDefault();$('#note').textContent='Это концепт, номер никуда не отправлен.'});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('v');io.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll('.r').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
